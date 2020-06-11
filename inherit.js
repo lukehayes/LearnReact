@@ -22,3 +22,31 @@ var Person = function (_BasePerson) {
   return Person;
 
 }(BasePerson);
+
+
+
+// Abstract Class Definition
+var AbstractClass = function() {
+    if(this.constructor === AbstractClass) {
+        throw new Error("Cannot instantiate an Abstract Class!");
+    }
+    this.type = "Abstract Class";
+}
+
+AbstractClass.prototype.getType = function() {
+    return this.type;
+}
+
+var ConcreteClass = function() {
+    AbstractClass.apply(this);
+}
+
+ConcreteClass.prototype = Object.create(AbstractClass.prototype, {
+    'constructor' : ConcreteClass
+});
+
+var cc = new ConcreteClass();
+
+
+
+
