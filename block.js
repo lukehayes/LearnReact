@@ -1,22 +1,10 @@
 'use strict';
 
-class Block extends React.Component {
+const dom = document.getElementById('block_container');
 
-    render() {
-        // Simply create a p tag with some simple content
-        return React.createElement(
-            'p',
-            null,
-            'This is the content text'
-        );
-    }
-
-}
-
-const domBlock = document.querySelector("#block_container");
+console.debug(dom);
 
 ReactDOM.render(
-    React.createElement(Block),
-    domBlock
+  <h1>Hello, world!</h1>,
+  document.getElementById('block_container');
 );
-
