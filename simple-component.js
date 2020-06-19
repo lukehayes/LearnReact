@@ -1,10 +1,8 @@
 'use strict';
 
-const dom = document.getElementById('block_container');
+const dom = document.getElementById('simple-compontent);
 
-console.debug(dom);
-
-reactdom.render(
+ReactDOM.render(
   <h1>hello, world!</h1>,
-  document.getelementbyid('block_container');
+  document.getElementById('simple-compontent)
 )
