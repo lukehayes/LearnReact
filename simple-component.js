@@ -1,6 +1,6 @@
 'use strict';
 
-const dom = document.getelementbyid('block_container');
+const dom = document.getElementById('block_container');
 
 console.debug(dom);
 
