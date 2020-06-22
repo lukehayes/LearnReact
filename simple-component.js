@@ -9,8 +9,19 @@ function tick() {
     );
 }
 
+function Comment(props) {
+    return(
+        <div>Comment Example... {props.text}</div>
+    );
+}
+
 function Welcome(props) {
-    return <h1> Hello {props.name}</h1>;
+    return (
+        <React.Fragment>
+        <h1> Hello {props.name}</h1>
+        <Comment text="Comment text..."/>
+        </React.Fragment>
+    );
 }
 
 function App() {
@@ -25,10 +36,8 @@ function App() {
 
 }
 
-let element = <Welcome name="John"/>;
 
 ReactDOM.render(
     <App />,
     DOM
 );
-
