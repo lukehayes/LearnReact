@@ -5,7 +5,8 @@ class Clock extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {date: new Date()}
+        this.state = {date: new Date(), c: 0}
+
     }
 
     componentDidMount() {
@@ -21,6 +22,10 @@ class Clock extends React.Component {
         clearInterval(this.timerID);
     }
 
+    click() {
+        console.log(this.props);
+    }
+
     tick() {
 
         this.setState({
@@ -33,7 +38,7 @@ class Clock extends React.Component {
         return(
             <React.Fragment>
                 <h3>Clock Component</h3>
-                <h4>It is {this.state.date.toLocaleTimeString()}</h4>
+                <h4 onClick={this.click}>It is {this.state.date.toLocaleTimeString()}</h4>
             </React.Fragment>
         );
     }
